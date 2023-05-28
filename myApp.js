@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 
 mongoose.connect(process.env.MONGO_URI);
 
-name: String
-name: {type: String}
-name: {type: String, required: true} //preferred
+// name: String
+// name: {type: String}
+// name: {type: String, required: true} //preferred
 
 const personSchema = new Schema({
   name: { type: String, required: true },
@@ -16,7 +16,7 @@ const personSchema = new Schema({
 
 const Person = mongoose.model("Person", personSchema);
 
-let Person;
+// let Person;
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
