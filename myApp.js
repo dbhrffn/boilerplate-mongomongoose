@@ -1,7 +1,20 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 mongoose.connect(process.env.MONGO_URI);
+
+name: String
+name: {type: String}
+name: {type: String, required: true} //preferred
+
+const personSchema = new Schema({
+  name: { type: String, required: true },
+  age: Number,
+  favoriteFoods: [String]
+});
+
+const Person = mongoose.model("Person", personSchema);
 
 let Person;
 
