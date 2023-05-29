@@ -8,13 +8,13 @@ mongoose.connect(process.env.MONGO_URI);
 // name: {type: String}
 // name: {type: String, required: true} //preferred
 
-const personSchema = new Schema({
+var personSchema = new Schema({
   name: { type: String, required: true },
   age: Number,
   favoriteFoods: [String]
 });
 
-const Person = mongoose.model("Person", personSchema);
+var Person = mongoose.model("Person", personSchema);
 
 // let Person;
 
